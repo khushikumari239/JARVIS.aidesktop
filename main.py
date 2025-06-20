@@ -1,7 +1,9 @@
+import os
+
 import speech_recognition as sr
 import pyttsx3
 import webbrowser
-import openaitest
+# import openaitest
 
 
 def say(text):
@@ -20,7 +22,7 @@ def takeCommand():
         try:
             print("Listening....")
             print("Recognising....")
-            query = r.recognize_google(audio, language="hi-in")
+            query = r.recognize_google(audio, language="en-in")
             print(f"User said: {query}")
             return query
         except Exception as e:
@@ -30,7 +32,7 @@ def takeCommand():
 
 if __name__ == '__main__':
     print('PyCharm')
-    say("Hello, I am Oggy the DON")
+    say("The Date Isssssssss ")
     sites = [["Youtube", "https://youtube.com"], ["Wikipedia", "https://wikipedia.com"],
              ["Google", "https://google.com"]]
     while True:
@@ -41,7 +43,11 @@ if __name__ == '__main__':
             say("Goodbye!")
             break
 
-        for site in sites:
-            if f"open {site[0]}".lower() in query.lower():
-                say(f"Opening {site[0]} Buddy...")
-                webbrowser.open(site[1])
+        # for site in sites:
+        #     if f"open {site[0]}".lower() in query.lower():
+        #         say(f"Opening {site[0]} Buddy...")
+        #         webbrowser.open(site[1])
+        #
+        #         if "open music" in query :
+        #             musicPath = "C:\Users\User\Downloads\heat-and-snow-ncs-music-227965.mp3"
+        #             os.startfile(musicPath)
